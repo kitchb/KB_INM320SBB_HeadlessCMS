@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap for CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- CSS RESET -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+
+    <!-- EXTERNAL CSS LINK -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <title>Headless CMS</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+        <!-- Vertical Navigation Bar -->
+        <!-- For Responsive Nav Toggle Button -->
+        <input type="checkbox" id="sidebarToggleCheckbox" class="sidebar-toggle-checkbox">
+        <label for="sidebarToggleCheckbox" class="sidebar-toggle-label heading1"><img
+                src="assets/img/Icons/navbutton.svg" alt="Logo" width="20" height="20"></label>
+
+        <nav class="nav flex-column sidebar">
+            <div class="container-fluid sidebar-body">
+                <div class="vstack gap-3">
+                    <h1 class="nav-link dashboard heading1" aria-current="page" href="#">
+                        <img src="/assets/img/Icons/Dashboard Kit.png" alt="Logo" width="28" height="28"
+                            class="d-inline-block align-text-top">
+                        Dashboard Kit
+                    </h1>
+                    <a class="nav-link sidelink p-3" aria-current="page" href="#">
+                        <i class="bi bi-pie-chart-fill"></i>
+                        Overview
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-ticket-fill"></i>
+                        Tickets
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-lightbulb-fill"></i>
+                        Ideas
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-people-fill"></i>
+                        Contacts
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-person-fill"></i>
+                        Agents
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-book-fill"></i>
+                        Articles
+                    </a>
+                    <!-- Horizontal Divider -->
+                    <hr />
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-gear-fill"></i>
+                        Settings
+                    </a>
+                    <a class="nav-link sidelink p-3" href="#">
+                        <i class="bi bi-patch-check-fill"></i>
+                        Subscriptions
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <div class="d-flex flex-column mb-4 justify-content-between">
+            <!-- ROW 1 -->
+            <div class="p-4">
+                <div class="container-fluid">
+                    <!-- Header -->
+                    <header class="bg-surface-primary">
+                        <div class="container-fluid">
+                            <div class="mb-npx">
+                                <div class="row align-items-center">
+                                    <div class="hstack gap-3 topheader">
+                                        <div class="p-4 hleft">Overview</div>
+                                        <div class="hright">
+                                            <button type="button" class="btn btn-primary position-relative">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" fill="none" stroke="#C5C7CD" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="11" cy="11" r="8"></circle>
+                                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                </svg>
+                                            </button>
+                                            <button type="button" class="btn btn-primary position-relative">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"
+                                                    viewBox="0 0 18 19" fill="none">
+                                                    <path
+                                                        d="M7.99999 19C9.10374 19 9.99905 18.1047 9.99905 17H6.00093C6.00093 18.1047 6.89624 19 7.99999 19ZM14.7309 14.3216C14.1272 13.6728 12.9975 12.6969 12.9975 9.5C12.9975 7.07188 11.295 5.12812 8.99937 4.65125V4C8.99937 3.44781 8.55187 3 7.99999 3C7.44812 3 7.00062 3.44781 7.00062 4V4.65125C4.70499 5.12812 3.00249 7.07188 3.00249 9.5C3.00249 12.6969 1.8728 13.6728 1.26905 14.3216C1.08155 14.5231 0.998429 14.7641 0.999991 15C1.00343 15.5125 1.40562 16 2.00312 16H13.9969C14.5944 16 14.9969 15.5125 15 15C15.0016 14.7641 14.9184 14.5228 14.7309 14.3216Z"
+                                                        fill="#C5C7CD"></path>
+                                                    <circle cx="13" cy="5" r="3.75" fill="#3751FF" stroke="#F7F8FC"
+                                                        stroke-width="1.5"></circle>
+                                                </svg>
+                                            </button>
+                                            <div class="vr"></div>
+                                            <div class="p-4 profilename">Jones Ferdinand</div>
+                                            <img src="/assets/img/Icons/Jones Ferdinand Photo.png" alt="Logo" width="32"
+                                                height="32" class="UserIcon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="p-4">
+                    <!-- Row of Tickets Blocks -->
+                    <div class="row g-6 mb-6">
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Unresolved</h5>
+                                    <p class="card-text numb-block numbers1">60</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Overdue</h5>
+                                    <p class="card-text numb-block numbers1">16</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">Open</h5>
+                                    <p class="card-text numb-block numbers1">43</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                            <div class="card h-100">
+                                <div class="card-body ticketbar">
+                                    <h5 class="card-title heading1">On hold</h5>
+                                    <p class="card-text numb-block numbers1">64</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 3 -->
+                <div class="p-4">
+                    <!-- Today's Trends -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card-group d-flex flex-wrap">
+                                <div class="col-md-8">
+                                    <div class="card h-100 leftbar">
+                                        <div class="card-body">
+                                            <h2 class="card-title heading2">Today's trends</h2>
+                                            <div class="subheading">
+                                                <p class="card-text">as of 25 May 2019 09:41
+                                                    PM</p>
+                                                <img class="legend" src="assets/img/Icons/legend.png"
+                                                    alt="legend for graph: blue for today and grey for Yesterday">
+                                                <img src="/assets/img/Icons/graph.png" class="card-img-top graph"
+                                                    alt="graph image of today's trends">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 rightcard">
+                                        <ul class="list-group list-group-flush rightlist flex-grow-1">
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Resolved
+                                                <p>449</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Received
+                                                <p>426</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Average first response time
+                                                <p>33m</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Average response time
+                                                <p>3h 8m</p>
+                                            </li>
+                                            <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                Resolution with SLA
+                                                <p>94%</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROW 4 -->
+                <div class="container-fluid">
+                    <!-- Unresolved Tickets & Tasks -->
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- Unresolved Tickets Block -->
+                        <div class="col md-4">
+                            <div class="card fourthcard">
+                                <div class="card-body fourthcard-body">
+                                    <div class="top-subheading">
+                                        <h2 class="card-title heading2">Unresolved tickets</h2>
+                                        <a href="#" class="card-link"> View details </a>
+                                    </div>
+                                    <div class="subheading">
+                                        <p class="card-text">Group:<a href="" id="support"> Support </a></p>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush listblock">
+                                    <li class="list-group-item">
+                                        Waiting on Feature Request
+                                        <span class="text-nowrap text-xs text-muted">4238</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        Awaiting Customer Response
+                                        <span class="text-nowrap text-xs text-muted">1005</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        Awaiting Developer Fix
+                                        <span class="text-nowrap text-xs text-muted">914</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        Pending
+                                        <span class="text-nowrap text-xs text-muted">281</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Tasks Block -->
+                        <div class="col md-4 bottomblock">
+                            <div class="card fourthcard">
+                                <div class="card-body fourthcard-body">
+                                    <div class="top-subheading">
+                                        <h2 class="card-title heading2"> Tasks </h2>
+                                        <a href="#" class="card-link"> View all </a>
+                                    </div>
+                                    <p class="card-text subheading"> Today </p>
+                                </div>
+                                <ul class="list-group list-group-flush listblock">
+                                    <li class="list-group-item disabledtext" aria-disabled="true">
+                                        Create new task
+                                        <button><i class="bi bi-plus-square-fill"></i></button>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                            id="firstRadio" checked>
+                                        <label class="form-check-label" for="firstRadio">Finish ticket update</label>
+                                        <span class="badge text-bg-warning utext">URGENT</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                            id="secondRadio">
+                                        <label class="form-check-label" for="secondRadio">Create new ticket
+                                            example</label>
+                                        <span class="badge text-bg-success ntext">NEW</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                            id="thirdRadio">
+                                        <label class="form-check-label" for="thirdRadio">Update ticket report</label>
+                                        <span class="badge text-bg-secondary deftext" id="deftext">DEFAULT</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap for js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

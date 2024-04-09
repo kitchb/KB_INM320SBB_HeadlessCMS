@@ -1,0 +1,412 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+$background-color: rgb(241, 243, 245);
+$sidebar-color: rgb(43, 43, 43);
+
+// TEXT
+$font-stack: "Mulish", sans-serif;
+
+// COLORS
+$primary-color: black;
+$secondary-color: rgb(111, 110, 110);
+$tertiary-color: rgb(179, 178, 178);
+$sidebar-activecolor: rgb(235, 235, 235);
+$main-activecolor: rgb(63, 55, 227);
+
+// MIXINS
+// SIDEBAR
+@mixin sidebar {
+    width: 20%;
+    height: auto;
+    background-color: $sidebar-color;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+
+    .sidebar-body {
+        width: 100%;
+        height: 608px;
+        justify-content: space-between;
+        align-items: space-between;
+
+        .heading1 {
+            font-size: 19px;
+            font-weight: 700;
+            padding: 40px 30px;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            // margin: 5px 20px;
+
+            i {
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background-color: rgb(81, 80, 80);
+                color: $sidebar-activecolor;
+                border-left: solid white;
+            }
+        }
+
+        hr {
+            color: $tertiary-color;
+        }
+    }
+}
+
+// MAIN
+@mixin head2 {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+@mixin topsub {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+
+@mixin subhead {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $tertiary-color;
+    font-size: 12px;
+    height: auto;
+    width: 100%;
+}
+
+// HEADER
+@mixin header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .hleft {
+        width: 50%;
+        height: auto;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .hright {
+        width: 50%;
+        height: auto;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        button {
+            border: none;
+            background-color: transparent;
+
+            i {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+// ROW OF TICKET BLOCK
+@mixin ticketblock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+    h5 {
+        font-weight: 600;
+        font-size: 19px;
+        // color: $secondary-color;
+        opacity: .7;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    &:hover {
+        color: $main-activecolor !important;
+        border: 1px solid $main-activecolor !important;
+        border-radius: 5px;
+    }
+}
+
+// TODAY'S TREND
+@mixin leftblock {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+
+    .legend {
+        width: 172px;
+        height: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .graph {
+        padding: 20px;
+        margin-top: 30px;
+    }
+}
+
+@mixin rightblock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $secondary-color;
+
+    p {
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+// UNRESOLVED TICKET
+@mixin fourthcard-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px;
+
+    #support {
+        color: black;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+
+@mixin list {
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+    font-size: 14px;
+
+    li {
+        padding: 20px;
+
+        span {
+            float: inline-end;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            float: inline-end;
+
+            i {
+                color: $tertiary-color;
+            }
+        }
+    }
+}
+
+// MOBILE FIRST RESPONSIVE
+// CSS
+body {
+    font-family: $font-stack;
+    font-size: 12px;
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+// Vertical Sidebar
+.sidebar {
+    @include sidebar;
+    display: none;
+    width: 100%;
+
+    .sidebar-body{
+        .heading1{
+            padding: 20px 30px;
+        }
+
+        a{
+            font-size: 12px;
+        }
+    }
+}
+
+
+.dashboard {
+    color: $secondary-color;
+    font-size: 16px;
+}
+
+.sidelink {
+    color: $tertiary-color;
+}
+
+// Main Content
+.heading2 {
+    @include head2;
+}
+
+.subheading {
+    @include subhead;
+}
+
+// 1ST ROW
+.topheader {
+    @include header;
+
+    .profilename{
+        display: none;
+    }
+}
+
+// 2ND ROW
+.ticketbar {
+    @include ticketblock;
+}
+
+// 3RD ROW: TODAY'S TREND
+.rightcard {
+    width: 100%;
+    height: auto;
+    // display: flex;
+    // justify-content: center;
+    // align-content: center;
+    // flex-wrap: wrap;
+}
+
+.rightbar {
+    @include rightblock;
+    padding: 25px 90px;
+    white-space: nowrap;
+}
+
+.leftbar {
+    @include leftblock;
+}
+
+// 4TH ROW: TICKETS & TASKS
+.top-subheading {
+    @include topsub;
+}
+
+// .fourthcard {
+//     width: 100%;
+//     height: 336px;
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+// }
+
+.fourthcard-body {
+    @include fourthcard-body;
+}
+
+.listblock {
+    @include list;
+}
+
+// TEXT
+.disabledtext {
+    color: $tertiary-color;
+}
+
+// Responsive Nav Toggle Button
+.sidebar-toggle-label {
+    display: block;
+    background-color: #363740;
+    color: $secondary-color;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sidebarToggleCheckbox {
+    display: none;
+}
+
+.sidebar-toggle-checkbox:checked~.sidebar {
+    display: block;
+}
+
+// MEDIA QUERY
+@media (min-width: 989px) {
+
+    .sidebar {
+        // width: 100%; 
+        display: block;
+        width: 20%;
+
+        .sidebar-body{
+            .heading1{
+                padding: 40px 30px;
+            }
+    
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .topheader .hright {
+        width: 100%;
+        text-align: center;
+
+        .profilename{
+            display: block;
+        }
+    }
+
+    .sidebar-toggle-checkbox {
+        display: none;
+    }
+
+    .sidebar-toggle-label {
+        display: none;
+    }
+
+    .sidebar-toggle-checkbox:checked~.sidebar {
+        display: none;
+    }
+
+    .rightcard {
+        width: 100%;
+        height: auto;
+    }
+    
+}
