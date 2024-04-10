@@ -3,6 +3,7 @@
         "contactEmail": "kdbarreiro@myseneca.ca",
         "phone": "123-456-789",
         "name": "Kitch",
+        
         "mainnav": [
             {
                 "url": "/",
@@ -96,17 +97,7 @@
                 "label": "Resolution with SLA",
                 "value": "94%"
             }
-        ],
-        "tasks": [
-            "Create new task",
-            "Finish ticket update",
-            "Create new ticket example",
-            "Update ticket report"
-        ],
-        "labels": [
-            "URGENT",
-            "NEW",
-            "DEFAULT"
+
         ],
         "title": "Unresolved tickets",
         "group": "Support",
@@ -128,7 +119,7 @@
                 "count": 281
             }
         ],
-
+        
         "heading": "Tasks",
         "viewAllLink": "#",
         "subheading": "Today",
@@ -141,7 +132,7 @@
                 "name": "Finish ticket update",
                 "badge": "URGENT"
             },
-            
+
             {
                 "name": "Create new ticket example",
                 "badge": "NEW"

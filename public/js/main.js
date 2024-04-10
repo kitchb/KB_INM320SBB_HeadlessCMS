@@ -1,6 +1,5 @@
 console.log('hello');
-
-
+  
 // ASYNC FOR SIDEBAR MENU
   async function demoFunction () {
     try {
