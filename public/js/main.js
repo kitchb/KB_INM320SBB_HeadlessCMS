@@ -64,7 +64,6 @@ console.log('hello');
   
   loadTickets();
 
-
 // FETCH for Row 2 Right Column 
   function loadListItems() {
     const listContainer = document.getElementById('rightgroup');
@@ -94,3 +93,108 @@ console.log('hello');
   }
   
   loadListItems();
+
+// FETCH for last row left block - Unresolved Tickers
+  function loadUnresolvedTickets() {
+    const unresolvedTicketsContainer = document.getElementById('leftblock');
+    
+    fetch('../data/content.json')
+      .then(response => response.json())
+      .then(data => {
+        unresolvedTicketsContainer.querySelector('.card-title').textContent = data.title;
+        
+        unresolvedTicketsContainer.querySelector('#support').textContent = data.group;
+        
+        const ticketList = unresolvedTicketsContainer.querySelector('.listblock');
+        data.unresolvedlist.forEach(ticket => {
+          const listItem = document.createElement('li');
+          listItem.classList.add('list-group-item');
+          listItem.textContent = ticket.name;
+          
+          const countSpan = document.createElement('span');
+          countSpan.classList.add('text-nowrap', 'text-xs', 'text-muted');
+          countSpan.textContent = ticket.count;
+          
+          listItem.appendChild(countSpan);
+          ticketList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading unresolved tickets:', error);
+      });
+  }
+  
+  loadUnresolvedTickets();
+
+
+// FETCH for last row right block
+function loadTasks() {
+    const tasksContainer = document.querySelector('.bottomblock');
+  
+    fetch('../data/content.json')
+      .then(response => response.json())
+      .then(data => {
+        tasksContainer.querySelector('.card-title').textContent = data.heading;
+  
+        tasksContainer.querySelector('.card-link').setAttribute('href', data.viewAllLink);
+  
+        tasksContainer.querySelector('.subheading').textContent = data.subheading;
+  
+        const taskList = tasksContainer.querySelector('.listblock');
+        data.tasklist.forEach((task, index) => {
+          const listItem = document.createElement('li');
+          listItem.classList.add('list-group-item');
+
+          if (index === 0) {
+            listItem.classList.add('disabledtext');
+            listItem.setAttribute('aria-disabled', 'true');
+          }
+  
+          if (index === 0) {
+            // task button
+            const createTaskButton = document.createElement('button');
+            createTaskButton.innerHTML = '<i class="bi bi-plus-square-fill"></i>';
+            listItem.appendChild(document.createTextNode('Create new task '));
+            listItem.appendChild(createTaskButton);
+          } else {
+            // radio input
+            const radioInput = document.createElement('input');
+            radioInput.classList.add('form-check-input', 'me-1');
+            radioInput.setAttribute('type', 'radio');
+            radioInput.setAttribute('name', 'listGroupRadio');
+            radioInput.setAttribute('id', `taskRadio${index}`);
+            if (index === 1) {
+              radioInput.setAttribute('checked', 'checked');
+            }
+  
+            const radioLabel = document.createElement('label');
+            radioLabel.classList.add('form-check-label');
+            radioLabel.setAttribute('for', `taskRadio${index}`);
+            radioLabel.textContent = task.name;
+  
+            const badgeSpan = document.createElement('span');
+            badgeSpan.classList.add('badge', 'utext');
+
+            if (task.badge === 'URGENT') {
+                badgeSpan.classList.add('text-bg-warning');
+              } else if (task.badge === 'NEW') {
+                badgeSpan.classList.add('text-bg-success');
+              } else if (task.badge === 'DEFAULT') {
+                badgeSpan.classList.add('text-bg-secondary');
+              }
+            badgeSpan.textContent = task.badge;
+  
+            listItem.appendChild(radioInput);
+            listItem.appendChild(radioLabel);
+            listItem.appendChild(badgeSpan);
+          }
+  
+          taskList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading tasks:', error);
+      });
+  }
+  
+  loadTasks();

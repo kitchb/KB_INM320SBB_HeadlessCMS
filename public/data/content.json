@@ -97,24 +97,6 @@
                 "value": "94%"
             }
         ],
-        "unresolvedTickets": [
-            {
-                "name": "Waiting on Feature Request",
-                "count": "4238"
-            },
-            {
-                "name": "Awaiting Customer Response",
-                "count": "1005"
-            },
-            {
-                "name": "Awaiting Developer Fix",
-                "count": "914"
-            },
-            {
-                "name": "Pending",
-                "count": "281"
-            }
-        ],
         "tasks": [
             "Create new task",
             "Finish ticket update",
@@ -125,5 +107,48 @@
             "URGENT",
             "NEW",
             "DEFAULT"
+        ],
+        "title": "Unresolved tickets",
+        "group": "Support",
+        "unresolvedlist": [
+            {
+                "name": "Waiting on Feature Request",
+                "count": 4238
+            },
+            {
+                "name": "Awaiting Customer Response",
+                "count": 1005
+            },
+            {
+                "name": "Awaiting Developer Fix",
+                "count": 914
+            },
+            {
+                "name": "Pending",
+                "count": 281
+            }
+        ],
+
+        "heading": "Tasks",
+        "viewAllLink": "#",
+        "subheading": "Today",
+        "tasklist": [
+            {
+                "name": " ",
+                "badge": " "
+            },
+            {
+                "name": "Finish ticket update",
+                "badge": "URGENT"
+            },
+            
+            {
+                "name": "Create new ticket example",
+                "badge": "NEW"
+            },
+            {
+                "name": "Update ticket report",
+                "badge": "DEFAULT"
+            }
         ]
     }
