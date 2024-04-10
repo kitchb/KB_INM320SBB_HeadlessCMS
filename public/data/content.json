@@ -3,7 +3,7 @@
         "contactEmail": "kdbarreiro@myseneca.ca",
         "phone": "123-456-789",
         "name": "Kitch",
-        "mainNav": [
+        "mainnav": [
             {
                 "url": "/",
                 "text": "Overview",
@@ -39,30 +39,91 @@
                 "text": "Articles",
                 "icon": "fa-book",
                 "newTab": false
+            },
+            {
+                "url": "/settings.html",
+                "text": "Settings",
+                "icon": "fa-cog",
+                "newTab": false
+            },
+            {
+                "url": "/subscriptions.html",
+                "text": "Subscriptions",
+                "icon": "fa-medal",
+                "newTab": false
             }
         ],
-
-        "user":{
+        "user": {
             "fullname": "Jones Fernandez",
             "useravatar": "assets/img/Icons/Jones Fernandez Photo.png"
         },
-
-        "cards": [
+        "tickets": [
             {
-                "status": "unresolved",
+                "status": "Unresolved",
                 "amount": 60
             },
             {
-                "status": "overdue",
+                "status": "Overdue",
                 "amount": 16
             },
             {
-                "status": "open",
+                "status": "Open",
                 "amount": 43
             },
             {
-                "status": "on hold",
-    
+                "status": "On hold",
+                "amount": 64
             }
+        ],
+        "listItems": [
+            {
+                "label": "Resolved",
+                "value": "449"
+            },
+            {
+                "label": "Received",
+                "value": "426"
+            },
+            {
+                "label": "Average first response time",
+                "value": "33m"
+            },
+            {
+                "label": "Average response time",
+                "value": "3h 8m"
+            },
+            {
+                "label": "Resolution with SLA",
+                "value": "94%"
+            }
+        ],
+        "unresolvedTickets": [
+            {
+                "name": "Waiting on Feature Request",
+                "count": "4238"
+            },
+            {
+                "name": "Awaiting Customer Response",
+                "count": "1005"
+            },
+            {
+                "name": "Awaiting Developer Fix",
+                "count": "914"
+            },
+            {
+                "name": "Pending",
+                "count": "281"
+            }
+        ],
+        "tasks": [
+            "Create new task",
+            "Finish ticket update",
+            "Create new ticket example",
+            "Update ticket report"
+        ],
+        "labels": [
+            "URGENT",
+            "NEW",
+            "DEFAULT"
         ]
     }

@@ -255,12 +255,12 @@ body {
     display: none;
     width: 100%;
 
-    .sidebar-body{
-        .heading1{
+    .sidebar-body {
+        .heading1 {
             padding: 20px 30px;
         }
 
-        a{
+        a {
             font-size: 12px;
         }
     }
@@ -289,7 +289,7 @@ body {
 .topheader {
     @include header;
 
-    .profilename{
+    .profilename {
         display: none;
     }
 }
@@ -372,12 +372,12 @@ body {
         display: block;
         width: 20%;
 
-        .sidebar-body{
-            .heading1{
+        .sidebar-body {
+            .heading1 {
                 padding: 40px 30px;
             }
-    
-            a{
+
+            a {
                 font-size: 16px;
             }
         }
@@ -387,7 +387,7 @@ body {
         width: 100%;
         text-align: center;
 
-        .profilename{
+        .profilename {
             display: block;
         }
     }
@@ -408,5 +408,27 @@ body {
         width: 100%;
         height: auto;
     }
-    
+
+}
+
+
+// 
+
+.nav-link.sidelink.menu-item {
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-link.sidelink.menu-item:hover {
+    background-color: rgb(81, 80, 80);
+    color: $sidebar-activecolor;
+    border-left: solid white;
+}
+
+.nav-link.sidelink.menu-item:nth-last-child(2) {
+    border-top: 1px solid rgb(110, 110, 110);
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid rgba(48, 48, 48, 0.125);
 }

@@ -282,5 +282,23 @@ body {
     height: auto;
   }
 }
+.nav-link.sidelink.menu-item {
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-link.sidelink.menu-item:hover {
+  background-color: rgb(81, 80, 80);
+  color: rgb(235, 235, 235);
+  border-left: solid white;
+}
+
+.nav-link.sidelink.menu-item:nth-last-child(2) {
+  border-top: 1px solid rgb(110, 110, 110);
+}
+
+.list-group-item:not(:last-child) {
+  border-bottom: 1px solid rgba(48, 48, 48, 0.125);
+}
 
 /*# sourceMappingURL=style.css.map */

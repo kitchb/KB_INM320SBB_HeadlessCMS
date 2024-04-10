@@ -20,6 +20,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
             rel="stylesheet">
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/9c9b833cfa.js" crossorigin="anonymous"></script>
 
         <title>Headless CMS</title>
     </head>
@@ -32,7 +34,7 @@
             <label for="sidebarToggleCheckbox" class="sidebar-toggle-label heading1"><img
                     src="assets/img/Icons/navbutton.svg" alt="Logo" width="20" height="20"></label>
 
-            <nav class="nav flex-column sidebar">
+            <nav id="sidenav"  class="nav flex-column sidebar">
                 <div class="container-fluid sidebar-body">
                     <div class="vstack gap-3">
                         <h1 class="nav-link dashboard heading1" aria-current="page" href="#">
@@ -40,46 +42,48 @@
                                 class="d-inline-block align-text-top">
                             Dashboard Kit
                         </h1>
-                        <a class="nav-link sidelink p-3" aria-current="page" href="#">
-                            <i class="bi bi-pie-chart-fill"></i>
-                            Overview
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-ticket-fill"></i>
-                            Tickets
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-lightbulb-fill"></i>
-                            Ideas
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-people-fill"></i>
-                            Contacts
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-person-fill"></i>
-                            Agents
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-book-fill"></i>
-                            Articles
-                        </a>
-                        <!-- Horizontal Divider -->
-                        <hr />
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-gear-fill"></i>
-                            Settings
-                        </a>
-                        <a class="nav-link sidelink p-3" href="#">
-                            <i class="bi bi-patch-check-fill"></i>
-                            Subscriptions
-                        </a>
+                        <div id="menu">
+                            <!-- <a class="nav-link sidelink p-3" aria-current="page" href="#">
+                            <i class="fa-solid fa-chart-pie"><i>
+                                Overview
+                            </a>
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="fa-solid fa-ticket"></i>
+                                Tickets
+                            </a>
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                Ideas
+                            </a>
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="fa-solid fa-users"></i>
+                                Contacts
+                            </a>
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="fa-solid fa-user"></i>
+                                Agents
+                            </a>
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="fa-solid fa-book"></i>
+                                Articles
+                            </a> -->
+                            <!-- Horizontal Divider -->
+                            <!-- <hr />
+                            <a class="nav-link sidelink p-3" href="#">
+                                <i class="bi bi-gear-fill"></i>
+                                Settings
+                            </a> -->
+                            <!-- <a class="nav-link sidelink p-3" href="#">
+                                <i class="bi bi-patch-check-fill"></i>
+                                Subscriptions
+                            </a> -->
+                        </ul>
                     </div>
                 </div>
             </nav>
 
             <!-- Main content -->
-            <div class="d-flex flex-column mb-4 justify-content-between">
+            <div id="maincontent"class="d-flex flex-column mb-4 justify-content-between">
                 <!-- ROW 1 -->
                 <div class="p-4">
                     <div class="container-fluid">
@@ -122,41 +126,41 @@
                     </div>
 
                     <!-- ROW 2 -->
-                    <div class="p-4">
+                    <!-- <div class="p-4"> -->
                         <!-- Row of Tickets Blocks -->
-                        <div class="row g-6 mb-6">
-                            <div class="col-xl-3 col-sm-6 col-12">
+                        <div id="tickets" class="row g-6 mb-6">
+                            <!-- <div class="col-xl-3 col-sm-6 col-12">
                                 <div class="card h-100">
                                     <div class="card-body ticketbar">
-                                        <h5 class="card-title heading1"></h5>
-                                        <p class="card-text numb-block numbers1"></p>
+                                        <h5 class="card-title heading1">Unresolved</h5>
+                                        <p class="card-text numb-block numbers1">60</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-xl-3 col-sm-6 col-12">
+                                <div class="card h-100">
+                                    <div class="card-body ticketbar">
+                                        <h5 class="card-title heading1">Overdue</h5>
+                                        <p class="card-text numb-block numbers1">16</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-sm-6 col-12">
                                 <div class="card h-100">
                                     <div class="card-body ticketbar">
-                                        <h5 class="card-title heading1"></h5>
-                                        <p class="card-text numb-block numbers1"></p>
+                                        <h5 class="card-title heading1">Open</h5>
+                                        <p class="card-text numb-block numbers1">43</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-sm-6 col-12">
+                            </div> -->
+                            <!-- <div class="col-xl-3 col-sm-6 col-12">
                                 <div class="card h-100">
                                     <div class="card-body ticketbar">
-                                        <h5 class="card-title heading1"></h5>
-                                        <p class="card-text numb-block numbers1"></p>
+                                        <h5 class="card-title heading1">On Hold</h5>
+                                        <p class="card-text numb-block numbers1">64</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-sm-6 col-12">
-                                <div class="card h-100">
-                                    <div class="card-body ticketbar">
-                                        <h5 class="card-title heading1"></h5>
-                                        <p class="card-text numb-block numbers1"></p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -182,28 +186,28 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="card h-100 rightcard">
+                                        <div id="rightgroup" class="card h-100 rightcard">
                                             <ul class="list-group list-group-flush rightlist flex-grow-1">
-                                                <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                <!-- <li class="list-group-item disabled rightbar" aria-disabled="true">
                                                     Resolved
                                                     <p>449</p>
-                                                </li>
-                                                <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                </li> -->
+                                                <!-- <li class="list-group-item disabled rightbar" aria-disabled="true">
                                                     Received
                                                     <p>426</p>
-                                                </li>
-                                                <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                </li> -->
+                                                <!-- <li class="list-group-item disabled rightbar" aria-disabled="true">
                                                     Average first response time
                                                     <p>33m</p>
-                                                </li>
-                                                <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                </li> -->
+                                                <!-- <li class="list-group-item disabled rightbar" aria-disabled="true">
                                                     Average response time
                                                     <p>3h 8m</p>
-                                                </li>
-                                                <li class="list-group-item disabled rightbar" aria-disabled="true">
+                                                </li> -->
+                                                <!-- <li class="list-group-item disabled rightbar" aria-disabled="true">
                                                     Resolution with SLA
                                                     <p>94%</p>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -217,8 +221,8 @@
                         <!-- Unresolved Tickets & Tasks -->
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <!-- Unresolved Tickets Block -->
-                            <div class="col md-4">
-                                <div class="card fourthcard">
+                            <div  class="col md-4">
+                                <div id="leftblock" class="card fourthcard">
                                     <div class="card-body fourthcard-body">
                                         <div class="top-subheading">
                                             <h2 class="card-title heading2">Unresolved tickets</h2>
