@@ -1,0 +1,68 @@
+    {
+        "siteName": "My Site",
+        "contactEmail": "kdbarreiro@myseneca.ca",
+        "phone": "123-456-789",
+        "name": "Kitch",
+        "mainNav": [
+            {
+                "url": "/",
+                "text": "Overview",
+                "icon": "fa-chart-pie",
+                "newTab": false
+            },
+            {
+                "url": "/tickets.html",
+                "text": "Tickets",
+                "icon": "fa-ticket",
+                "newTab": false
+            },
+            {
+                "url": "/ideas.html",
+                "text": "Ideas",
+                "icon": "fa-lightbulb",
+                "newTab": false
+            },
+            {
+                "url": "/contact.html",
+                "text": "Contacts",
+                "icon": "fa-users",
+                "newTab": true
+            },
+            {
+                "url": "/agents.html",
+                "text": "Agents",
+                "icon": "fa-user",
+                "newTab": false
+            },
+            {
+                "url": "/articles.html",
+                "text": "Articles",
+                "icon": "fa-book",
+                "newTab": false
+            }
+        ],
+
+        "user":{
+            "fullname": "Jones Fernandez",
+            "useravatar": "assets/img/Icons/Jones Fernandez Photo.png"
+        },
+
+        "cards": [
+            {
+                "status": "unresolved",
+                "amount": 60
+            },
+            {
+                "status": "overdue",
+                "amount": 16
+            },
+            {
+                "status": "open",
+                "amount": 43
+            },
+            {
+                "status": "on hold",
+    
+            }
+        ]
+    }
